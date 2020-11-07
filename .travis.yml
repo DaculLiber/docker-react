@@ -4,6 +4,3 @@ services:
 
 before_install:
     - docker build -t dacul/docker-react -f Dockerfile.dev .
-
-script:
-    - docker run dacul/docker-react npm run test -- --coverage
