@@ -6,8 +6,6 @@ services:
 before_install:
     - docker build -t dacul/docker-react -f Dockerfile.dev .
 
-# TE ROG
-
 deploy:
   provider: elasticbeanstalk
   access_key_id: "$AWS_ACCESS_KEY"
