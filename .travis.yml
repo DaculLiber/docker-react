@@ -1,4 +1,4 @@
-language: none
+language: generic
 sudo: required
 services:
     - docker
@@ -15,5 +15,6 @@ deploy:
   app: "docker-react"
   env: "DockerReact-env"
   bucket_name: "elasticbeanstalk-eu-central-1-401545621718"
+  bucket_path: "docker-react"
   on:
     branch: master
