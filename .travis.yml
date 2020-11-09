@@ -5,3 +5,15 @@ services:
 
 before_install:
     - docker build -t dacul/docker-react -f Dockerfile.dev .
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: 
+    secure: $AWS_SECRET_KEY
+  region: "eu-central-1"
+  app: "docker-react"
+  env: "DockerReact-env"
+  bucket_name: "elasticbeanstalk-eu-central-1-401545621718"
+  on:
+    branch: master
